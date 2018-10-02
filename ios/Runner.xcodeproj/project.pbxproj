@@ -186,7 +186,7 @@
 				TargetAttributes = {
 					97C146ED1CF9000F007C117D = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = K69VE4UMZN;
+						DevelopmentTeam = 2CCV6DZ29E;
 						LastSwiftMigration = 0910;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
@@ -464,7 +464,7 @@
 					"$(PROJECT_DIR)/Flutter",
 				);
 				"OTHER_SWIFT_FLAGS[arch=*]" = "-D DEBUG";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mercari.ios.mtc.dev;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mercari.ios.mtc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "04a6b4ea-5cd1-4cfd-9f88-2d50d1bd3e0a";
 				PROVISIONING_PROFILE_SPECIFIER = "Mercari Tech Conf iOS Development";
@@ -498,7 +498,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flutter",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mercari.ios.mtc.dev;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mercari.ios.mtc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "dbd58f55-dfdc-456d-94c2-7760e974c99d";
 				PROVISIONING_PROFILE_SPECIFIER = "Mercari Tech Conf Release";
