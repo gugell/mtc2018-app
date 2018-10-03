@@ -45,14 +45,16 @@ class TagTimeTablePage extends StatelessWidget {
             settings: RouteSettings(name: "/tag_time_table"),
             builder: (context) {
               return TagTimeTablePage(
-                  tagName: tagName, sessionList: sessionList);
+                  repository: repository,
+                  tagName: tagName,
+                  sessionList: sessionList);
             }));
   }
 
   Widget buildBody(BuildContext context) {
     var _sessions = sessionList.where((s) => s.tags.contains(tagName));
     return Container(
-        margin: const EdgeInsets.all(16.0),
+        margin: const EdgeInsets.all(8.0),
         child: ListView(
             children: _sessions.map((session) {
           return SessionCard(
@@ -74,6 +76,7 @@ class TagTimeTablePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          iconTheme: IconThemeData(color: Colors.white),
           title: Text(tagName),
           centerTitle: false,
         ),

@@ -36,6 +36,7 @@ class _NewsPageState extends State<NewsPage> {
     if (_newsList.length == 0) {
       return Scaffold(
           appBar: AppBar(
+            iconTheme: IconThemeData(color: Colors.white),
             title: Text(MtcLocalizations.of(context).newsTitle),
             centerTitle: false,
           ),
@@ -46,18 +47,19 @@ class _NewsPageState extends State<NewsPage> {
 
     return Scaffold(
         appBar: AppBar(
+          iconTheme: IconThemeData(color: Colors.white),
           title: Text(MtcLocalizations.of(context).newsTitle),
           centerTitle: false,
         ),
         body: RefreshIndicator(
           onRefresh: _handleRefresh,
           child: ListView(
-            padding: EdgeInsets.all(16.0),
+            padding: EdgeInsets.all(8.0),
             children: _newsList.map((news) {
               return Card(
                   color: Colors.white,
                   child: Container(
-                    padding: EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 24.0),
+                    padding: EdgeInsets.all(16.0),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -66,22 +68,22 @@ class _NewsPageState extends State<NewsPage> {
                             Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
+                                  Text(news.date,
+                                      style: TextStyle(
+                                          fontSize: 12.0,
+                                          color: kMtcPrimaryGrey)),
+                                  Container(height: 4.0),
                                   Text(
                                     news.localizedMessage(context),
                                     style: TextStyle(
                                         fontSize: 16.0,
                                         color: kMtcPrimaryGrey,
                                         fontWeight: FontWeight.bold),
-                                  ),
-                                  Container(height: 4.0),
-                                  Text(news.date,
-                                      style: TextStyle(
-                                          fontSize: 12.0,
-                                          color: kMtcPrimaryGrey))
+                                  )
                                 ])
                           ],
                         ),
-                        Container(height: 12.0),
+                        Container(height: 4.0),
                         Text(news.localizedMessage(context),
                             style: TextStyle(color: kMtcPrimaryGrey)),
                       ],

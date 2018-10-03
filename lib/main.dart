@@ -94,6 +94,7 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        iconTheme: IconThemeData(color: Colors.white),
         title: Image.asset("images/navbar_icn.png"),
         centerTitle: false,
         actions: [
@@ -109,7 +110,7 @@ class _MainPageState extends State<MainPage> {
             },
           ),
         ],
-        elevation: 4.0,
+        elevation: 0.0,
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.map),
